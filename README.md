@@ -18,10 +18,16 @@ Delivery ETA: Two Weeks &copy;
 
 # Project setup and modifications:
 ```git clone``` repo
+
 install python3.6
+
 install pipenv, navigate to the cell_counter repository folder
+
 install dependencies ```pipenv install```
+
 ```pipenv shell```
+
 Run ```jupyter notebook```
+
 Connect any usb camera to computer, may need to modify OpenCV device ID if other cameras in use (cv2.VideoCapture(0)-->cv2.VideoCapture(1))
 
