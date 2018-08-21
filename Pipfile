@@ -8,7 +8,6 @@ ipykernel = "*"
 jupyter = "*"
 matplotlib = "*"
 scikit-image = "*"
-opencv-contrib-python = "*"
 
 [dev-packages]
 
