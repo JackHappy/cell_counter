@@ -1,5 +1,5 @@
 # exclude research folder
-notes
+research
 
 # exclude jupyter checkpoints
 .ipynb_checkpoints
