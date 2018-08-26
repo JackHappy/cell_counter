@@ -7,4 +7,4 @@ research
 
 # Exclude darkflow repo, except for out project notebooks
 darkflow/*
-!darkflow/*.ipynb 
+!darkflow/image_classifier_yolov2.ipynb 
