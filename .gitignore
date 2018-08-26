@@ -3,3 +3,7 @@ research
 
 # exclude jupyter checkpoints
 .ipynb_checkpoints
+
+# external git repositories
+repositories
+repositories/*

@@ -8,6 +8,7 @@ ipykernel = "*"
 jupyter = "*"
 matplotlib = "*"
 scikit-image = "*"
+tensorflow = "*"
 
 [dev-packages]
 
