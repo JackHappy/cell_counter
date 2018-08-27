@@ -8,3 +8,6 @@ research
 # Exclude darkflow repo, except for out project notebooks
 darkflow/*
 !**/*.ipynb 
+
+# Exclude all the training data for the classifier
+media/data/*
