@@ -1,18 +1,10 @@
-
-# coding: utf-8
-
-# In[3]:
-
+# modified from : https://github.com/markjay4k/YOLO-series/blob/master/part7%20-%20generate_xml.py
 
 import os
 import matplotlib.pyplot as plt
 import cv2
 from matplotlib.widgets import RectangleSelector
 from generate_xml import write_xml
-
-
-# In[7]:
-
 
 # global constants
 img = None
@@ -25,10 +17,6 @@ image_folder = 'media/data/manually_annotated_images/'
 savedir = 'media/data/annotations/'
 obj = 'positive_tumour_cell'
 
-
-# In[8]:
-
-
 def line_select_callback(clk, rls):
     global tl_list
     global br_list
@@ -36,7 +24,6 @@ def line_select_callback(clk, rls):
     tl_list.append((int(clk.xdata), int(clk.ydata)))
     br_list.append((int(rls.xdata), int(rls.ydata)))
     object_list.append(obj)
-
 
 def onkeypress(event):
     global object_list
@@ -54,10 +41,6 @@ def onkeypress(event):
 
 def toggle_selector(event):
     toggle_selector.RS.set_active(True)
-
-
-# In[10]:
-
 
 if __name__ == '__main__':
     for n, image_file in enumerate(os.scandir(image_folder)):
