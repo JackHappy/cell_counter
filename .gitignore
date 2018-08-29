@@ -11,3 +11,7 @@ darkflow/*
 
 # Exclude all the training data for the classifier
 media/data/*
+
+# exclude the yolo_mark repo, which is for annotating datasets
+Yolo_mark/*
+!**/*setup.md
