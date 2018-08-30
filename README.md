@@ -37,15 +37,19 @@ Connect any usb camera to computer, may need to modify OpenCV device ID if other
 
 Place images in `media/data`
 
-Annotate the images with bounding boxes
-(This can be done in small batches for sanity)
+### Rename images
+python prepare_data.py -R
 
-For example, annotate all the cells in 3 images, located in media/ki67_tumour folder as either pos_tumour, neg_tumour or non_tumour:
-python prepare_data.py -dir media/data/ki67_tumour -categories (pos_tumour,neg_tumour,non_tumour) -boxes 3
+
+### Annotate the images with bounding boxes
+(This can be done in small batches for sanity)
+python prepare_data.py -D
+
+### Generate config file
+python prepare_data.py -C
+
 
 prepare_data.py flags:
-    -dir # Location of images to train model with, format: media/data/x
-    -rename # relabel images, format: name (gives: name_0001.jpg, name_0002.jpg, ...))
-    -categories # The names of objects you want to classify, format: (pos_tumour,neg_tumour,non_tumour))
-    -boxes # Draw bounding boxes on n un-annotated images without annotations, format: n
-    -config # Takes n number of object classes as input, generates .cfg, format: n
+    -R --rename
+    -D --draw
+    -C --config

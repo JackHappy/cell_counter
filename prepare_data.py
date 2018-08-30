@@ -1,20 +1,32 @@
 import data_curation # My module, located: cell_counter/data_curation
+# Available modules 
 import argparse
 
 # take in flags
-parser = argparse.ArgumentParser()
+def get_args():
+        
+    parser = argparse.ArgumentParser()
 
-parser.add_argument('-dir','--image_directory', help='Location of images to train model with, format: media/data/x' )
-parser.add_argument('-rename', '--rename_images', help='relabel images, format: name (gives: name_0001.jpg, name_0002.jpg, ...)')
-parser.add_argument('-categories', '--object_categories', help='The names of objects you want to classify, format: (pos_tumour,neg_tumour,non_tumour)')
-parser.add_argument('-boxes', '--draw_boxes', help='Draw bounding boxes on n un-annotated images without annotations, format: n')
-parser.add_argument('-config', '--generate_config', help='takes n number of object classes as input, generates .cfg, format: n')
+    parser.add_argument('-R','--rename_images',help='Rename images to a uniform filesystem name_0001.jpg, name_0002.jpg, ...' )
+    parser.add_argument('-D', '--draw_boxes', nargs='*', help='The names of objects you want to classify, format: pos_tumour neg_tumour non_tumour')
+    parser.add_argument('-C', '--generate_config', help='takes n number of object classes as input, generates .cfg, format: n')
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-print(" \tDirectory: {} \n\tFilenames: {} \n\tCategories: {} \n\tImages to annotate: {}".format(
-    args.image_directory,
-    args.rename_images,
-    args.object_categories,
-    args.draw_boxes,
-    args.generate_config))
+    print(" \tRename: {} \n\tDraw: {} \n\tConfig: {}".format(
+        args.rename_images,
+        args.draw_boxes,
+        args.generate_config))
+
+
+# For args.rename_images, module: data_curation.rename_images
+
+# For Draw boxes, modules: data_curation.manual_bounding_boxes, data_curation.generate_xml
+
+# for Generate config, module: data_curation.generate_config_file
+
+
+if __name__ == '__main__':
+    get_args()
+
+
