@@ -84,6 +84,10 @@ prepare_data.py FLAGS:
 
 # Live camera feed classification
 
+TEMPORARY SOLUTION: `python darkflow/execute_local_model.py`
+
+FUTURE SOLUTION BELOW
+
 `python live_feed.py -FLAG OPTION`
 
 example: `python live_feed.py -C 1 -W bin/yolov3.weights
