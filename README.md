@@ -42,16 +42,40 @@ python prepare_data.py -R
 
 
 ### Annotate the images with bounding boxes
+
 (This can be done in small batches for sanity)
+
 `python prepare_data.py -D`
 
 ### Generate config file
+
 `python prepare_data.py -C`
 
 
 prepare_data.py flags:
+
     `-R --rename`
 
     `-D --draw`
 
     `-C --config`
+
+
+# Live camera feed classification
+
+python live_feed.py 
+
+example: `python live_feed.py -C 1 -W bin/yolov3.weights
+
+live_feed.py flags:
+
+    `-C', '--Camera_ID', default=0, Camera_ID The ID of the camera. Default 0. Format: x
+
+    `-M', '--Model', default='cfg/yolo.cfg' Location of config file relative to cell_counter/darkflow
+
+    `-W', '--Weights', default='bin/yolo.weights' Location of weights relative to cell_counter/darkflow
+
+    `-T', '--Threshold', default=0.4 Percentage confidence, above which to display box fo
+
+    `-G', '--GPU', default=1.0 GPU proportion    
+
