@@ -8,6 +8,8 @@ research
 # Exclude darkflow repo, except for out project notebooks
 darkflow/*
 !**/*.ipynb 
+!darkflow/execute_local_model.py
+!darkflow/__init__.py 
 
 # Exclude all the training data for the classifier
 media/data/*
