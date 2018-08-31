@@ -27,7 +27,7 @@ install dependencies ```pipenv install```
 
 ```pipenv shell```
 
-To run any .ipynb, in, run ```jupyter notebook```
+To run any .ipynb, run ```jupyter notebook```
 
 # Hardware configuration:
 
@@ -43,13 +43,15 @@ python prepare_data.py -R
 
 ### Annotate the images with bounding boxes
 (This can be done in small batches for sanity)
-python prepare_data.py -D
+`python prepare_data.py -D`
 
 ### Generate config file
-python prepare_data.py -C
+`python prepare_data.py -C`
 
 
 prepare_data.py flags:
-    -R --rename
-    -D --draw
-    -C --config
+    `-R --rename`
+
+    `-D --draw`
+
+    `-C --config`
