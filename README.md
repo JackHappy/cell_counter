@@ -1,6 +1,7 @@
 # Cell counter
 A tool to identify and quantify cell groups using open source code (OpenCV) and cheap equipment (USB camera)
 
+![alt text](examples/birdoma.JPG?raw=true "birdoma")
 
 # Goal 
 1. Connect the USB camera to any microscope and open a live feed
@@ -15,6 +16,7 @@ Envisioned: Clone repo and double click .exe or .dmg based on operating system
 
 Delivery ETA: Two Weeks &copy;
 
+![alt text](examples/broccoli_person.JPG?raw=true "Yes, that's right, I'm afraid you'll have to change youre diet")
 
 # Project setup and modifications:
 
@@ -42,6 +44,8 @@ Then follow the instructions outine in darkflow/README.md, but using pipenv not 
     `pipenv install -e .`
 
 As a workaround for a bug: ImportError: No module named 'darkflow.cython_utils'. Copy the  `cell_counter/darkflow/darkflow/cython_utils` and `cell_counter/darkflow/darkflow/utils` to `cell_counter/darkflow/` directory.
+
+![alt text](examples/hotdogs_or_cells.JPG?raw=true "hotdogs or cells?")
 
 # Hardware configuration:
 
@@ -103,4 +107,5 @@ live_feed.py FLAGS:
     `-T', '--Threshold', default=0.4 Percentage confidence, above which to display box fo
 
     `-G', '--GPU', default=1.0 GPU proportion    
+
 
