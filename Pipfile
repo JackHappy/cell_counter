@@ -12,6 +12,7 @@ tensorflow = "*"
 cython = "*"
 lxml = "*"
 opencv-contrib-python = "*"
+"bd4ad10" = {path = "./darkflow"}
 
 [dev-packages]
 

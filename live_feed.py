@@ -1,4 +1,4 @@
-import darkflow.execute_local_model # My module, located: cell_counter/data_curation
+import darkflow.execute_local_model # My module, located: cell_counter/darkflow
 # Available modules 
 import argparse
 
@@ -25,7 +25,7 @@ def get_args():
 
 
     
-    return args.Camera_ID, args.Device_ID, args.Model, args.Weights, args.Threshold, args.GPU
+    return args.Camera_ID, args.Model, args.Weights, args.Threshold, args.GPU
 
 
 def set_options(model,weights,threshold,gpu):
@@ -33,9 +33,11 @@ def set_options(model,weights,threshold,gpu):
         'model': model,
         'load': weights,
         'threshold': threshold,
-        'gpu': 1.0
+        'gpu': 1.0  
     }
-    return set_options
+
+    print('config options i entered: ',config_options)
+    return config_options
 
 
 
